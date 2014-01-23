@@ -60,7 +60,7 @@ for f in carpetas:
         aux = "_"+(((lineas.pop()).upper()).replace("'","F")).strip("\n")
         aux2 = f.strip("\n")
         subcarpetas += [(aux2,aux)]
-        os.system("mkdir Taquirule/"+aux2+"/"+aux+" 2> /dev/null && touch Taquirule/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux+" && chmod +x TAREA/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux)
+        os.system("mkdir Taquirule/"+aux2+"/"+aux+" 2> /dev/null && touch Taquirule/"+aux2+"/"+aux+"/##NOOO_AQUI_NO_ES"+aux+" && chmod +x TAREA/"+aux2+"/"+aux+"/##NOOO_AQUI_NO_ES"+aux)
         
 
 ##METER EL EQUIPO DE LODUDO en p1
