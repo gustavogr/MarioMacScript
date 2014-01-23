@@ -4,44 +4,65 @@
 import fileinput
 import random
 import os
+import pwd
+import crypt
 
 
-#CREANDO LOS DIRECTORIOS DE LA TAREA
+#Se crea el directorio principal
 os.system('mkdir Taquirule; chmod 755 -R Taquirule')
 
-for i in range(4):
-    os.system('mkdir TAREA/p'+str(i))
+#Se crean los subdirectorios principales
+os.system('mkdir Taquirule/templo_A')   #Para este necesitas la mascara de AA 
+os.system('mkdir Taquirule/templo_E')   #Para este necesitas la mascara de SB
+os.system('mkdir Taquirule/templo_F')   #Para este necesitas la mascara de EP
+os.system('mkdir Taquirule/templo_ET')  #Para este necesitas la mascara de GR
+os.system('mkdir Taquirule/templo_MAC') #Para este... Para este... necesitas la mascara de EAS
 
-#carpetas=(os.popen('ls TAREA')).readlines()
-#
-##ME LEO PALABRAS DE UN DICCIONARIO PARA CREAR ARCHIVOS Y CARPETAS BASURA
-#archivo = open('/etc/dictionaries-common/words','r')
-#lineas = archivo.readlines()
-#archivo.close()
-#
-##ME LAS SHUFFLEO PARA QUE SALGAN ALEATORIAMENTE
-#random.shuffle(lineas)
-#
-##ESCRIBO ARCHIVOS BASURA EN CADA CARPETA
-#for h in carpetas:
-#    for i in range(777):
-#
-#        archivo=open("TAREA/"+h.strip("\n")+"/"+(((lineas.pop()).lower()).replace("'","H")).strip("\n"),'w',0)
-#        archivo.close()
-#
-#
-#subcarpetas=[]
-#        
-##print carpetas[0].strip("\n")
-##ESCRIBO CARPETAS BASURA EN CADA CARPETA
-#for h in carpetas:
-#    for i in range(15):
-#        aux="_"+(((lineas.pop()).upper()).replace("'","U")).strip("\n")
-#        aux2=h.strip("\n")
-#        subcarpetas+=[(aux2,aux)]
-#        os.system("mkdir TAREA/"+aux2+"/"+aux+" 2> /dev/null && touch TAREA/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux+" && chmod +x TAREA/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux)
-#        
-#
+#Se encriptan las claves de los usuario 
+aa_passwd = crypt.crypt('chileabro','22')
+sb_passwd = crypt.crypt('galleta?','22')
+ep_passwd = crypt.crypt('comprooro','22')
+gr_passwd = crypt.crypt('palperreo','22')
+eas_passwd = crypt.crypt('soyeas','22')
+
+#Se crean los usuarios. Estos usuarios tendran una pista en el home
+#para el ultimo comando del Templo 
+os.system('useradd -s /bin/bash -p '+aa_passwd +' -m AA')
+os.system('useradd -s /bin/bash -p '+sb_passwd+' -m SB')
+os.system('useradd -s /bin/bash -p '+ep_passwd+' -m EP')
+os.system('useradd -s /bin/bash -p '+gr_passwd+' -m GR')
+os.system('useradd -s /bin/bash -p '+eas_passwd+' -m EAS')
+
+carpetas=(os.popen('ls Taquirule')).readlines()
+print 'Se crean los usuarios'
+
+#Se leen palabras de un diccionaro para crear las carpetas crap
+archivo = open('/etc/dictionaries-common/words','r')
+lineas = archivo.readlines()
+archivo.close()
+
+#Se les hace suffle para que salga aleatoria mente
+random.shuffle(lineas)
+
+#Se escribe archivos basura en cada carpeta
+
+for f in carpetas:
+	for i in range(777):
+		archivo = open("Taquirule/"+f.strip("\n")+"/"+(((lineas.pop()).lower()).replace("'","J")).strip("\n"),'w',0)
+		archivo.close()
+
+
+subcarpetas=[]
+        
+#ESCRIBO CARPETAS BASURA EN CADA CARPETA
+for f in carpetas:
+    for i in range(15):
+        aux = "_"+(((lineas.pop()).upper()).replace("'","F")).strip("\n")
+        aux2 = f.strip("\n")
+        subcarpetas += [(aux2,aux)]
+        os.system("mkdir Taquirule/"+aux2+"/"+aux+" 2> /dev/null && touch Taquirule/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux+" && chmod +x TAREA/"+aux2+"/"+aux+"/##ESTE_NO_ES"+aux)
+        
+
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
 #lodudo2=[".O",".d",".u",".D",".o",".L"]
