@@ -132,30 +132,27 @@ for i in range(9999):
 print '---Se carga el templo_A'
 #Fin del templo AA
 
-
 #Cosas de la pregunta 7
 masks=['keaton','skull','spooky','bunny','truth','goron','zora', 'gerudo',\
-	       'fiercedeity','blast','brenen', 'circus']
+           'fiercedeity','blast','brenen', 'circus']
 words_from_masks = []
 for i in range(1,300):
-	for m in masks:	
-		num = i % 5
+    for m in masks:	
+        num = i % 5
         if num != 0:
-		words_from_masks.append(m + str(random_N_digitos(int(num))))
+            words_from_masks.append(m + str(random_N_digitos(int(num))))
 
 words_from_masks = list(set(words_from_masks))
 
 for w in words_from_masks:
     	os.system('echo '+ w + '>> a1')
 
-random.shuffle(words_from_masks)        
-for w in words_from_masks:
-    	os.system('echo '+ w + '>> a2')
-
 palabra_distinta= 'CANALIZAR'
-os.system('echo '+ palabra_distinta + '>> a2')
+aux = words_from_masks + [palabra_distinta]
 
-
+random.shuffle(aux)        
+for w in aux:
+    	os.system('echo '+ w + '>> a2')
 
 
 #Templo de SB
@@ -214,6 +211,17 @@ os.system('touch Taquirule/templo_E/_TINGLES/_EAS/_MAJORAS/ZeldA')
 os.system('touch Taquirule/templo_E/_TINGLES/_MAC/_MAC/ZELDA')
 print '---Se carga el templo_E'
 #Fin del templo SB
+
+#Templo EP
+
+#Genera un archivo cOsA con permisos 700 y luego una carpera Xss con permisos 777
+os.system('touch Taquirule/templo_F/cOsA && chmod 700 Taquirule/templo_F/cOsA')
+os.system('mkdir Taquirule/templo_F/Xss && chmod 777 Taquirule/templo_F/Xss')
+for i in range(50):
+    os.system('touch Taquirule/templo_F/Xss/' + aux.pop())
+os.system('chmod -R 777 Taquirule/templo_F/Xss')
+
+#Fin del templo EP
 
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
