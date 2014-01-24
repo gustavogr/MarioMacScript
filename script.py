@@ -223,7 +223,20 @@ os.system('chmod -R 777 Taquirule/templo_F/Xss')
 
 #Fin del templo EP
 
+#Templo GR
+os.system('rm -rf Taquirule/templo_ET/_SKULL')
+os.system('rm -rf Taquirule/templo_ET/_KID')
+for i in range(800):
+	os.system('touch Taquirule/templo_ET/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
 
+os.system('mkdir Taquirule/templo_ET/_SKULL')
+os.system('mkdir Taquirule/templo_ET/_KID')
+lineas = respaldo
+	
+
+
+
+#Fin del Templo de GR 
 
 
 
@@ -233,7 +246,7 @@ MASCARAS = ['AA','SB','EP','GR','EAS']
 TEMPLOS = ['templo_A', 'templo_E', 'templo_F', 'templo_ET', 'templo_MAC']
 for i in range(5):
 	str0 = 'Taquirule/'+TEMPLOS[i]
-	os.system('chown '+MASCARAS[i]+' '+str0+' ; chmod 700 '+MASCARAS[i]+' '+str0)
+	os.system('chown '+MASCARAS[i]+' '+str0+' ; chmod 700 '+' '+str0)
 
 
 ##METER EL EQUIPO DE LODUDO en p1
