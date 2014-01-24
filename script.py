@@ -153,13 +153,6 @@ random.shuffle(aux)
 for w in aux:
     	os.system('echo '+ w + '>> a2')
 
-#Pregunta 6 de templo f
-os.system('touch cOsA && chmod 700 cOsA')
-os.system('mkdir Xss && chmod 777 Xss')
-for i in range(50):
-    os.system('touch Xss/' + aux.pop())
-os.system('chmod -R 777 Xss')
-
 
 #Templo de SB
 os.system('rm -rf Taquirule/templo_E/tatl')
@@ -191,7 +184,19 @@ for i in range(800):
 os.system('touch Taquirule/templo_E/great_fairy')
 os.system('echo "Te faltan mas hadas" >> Taquirule/templo_E/great_fairy') 
 
+
 #Fin del templo SB
+
+#Templo EP
+
+#Genera un archivo cOsA con permisos 700 y luego una carpera Xss con permisos 777
+os.system('touch Taquirule/templo_F/cOsA && chmod 700 Taquirule/templo_F/cOsA')
+os.system('mkdir Taquirule/templo_F/Xss && chmod 777 Taquirule/templo_F/Xss')
+for i in range(50):
+    os.system('touch Taquirule/templo_F/Xss/' + aux.pop())
+os.system('chmod -R 777 Taquirule/templo_F/Xss')
+
+#Fin del templo EP
 
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
