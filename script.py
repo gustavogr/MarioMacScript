@@ -56,6 +56,7 @@ os.system('cp mascara_templo_ET /home/GR/  ; echo "cat ~/mascara_templo_ET" >> /
 os.system('cp mascara_templo_MAC /home/EAS/ ; echo "cat ~/mascara_templo_MAC" >> /home/EAS/.bashrc')
 
 os.system('echo "" > /etc/motd')
+os.system("echo \"alias mascara='su'\" >> ~/.bashrc")
 os.system('echo "" > /var/run/motd.dynamic')
 
 os.system("echo \"alias ls='ls --color'\" >> /home/AA/.bashrc")
