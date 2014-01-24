@@ -72,6 +72,7 @@ os.system("echo \"alias mascara='su'\" >> /home/EP/.bashrc")
 os.system("echo \"alias mascara='su'\" >> /home/GR/.bashrc")
 os.system("echo \"alias mascara='su'\" >> /home/EAS/.bashrc")
 
+os.system("echo \"alias salirdelcastillo='python /home/invitado/admision/credits.py'\" >> /home/EAS/.bashrc") 
 print 'Se crean los usuarios y sus respectivos .bashrc'
 
 #Se leen palabras de un diccionaro para crear las carpetas crap
