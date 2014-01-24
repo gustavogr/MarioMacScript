@@ -121,14 +121,21 @@ for i in range(50):
 
 #archivo random que tendra 30 lineas
 os.system('rm -rf Taquirule/templo_A/gemelos')
+os.system('touch Taquirule/templo_A/gemelos')
 for i in range(30):
     os.system("echo ola bale >> Taquirule/templo_A/gemelos")
 #Colocandole 30K a un archivo
 os.system('rm -rf Taquirule/templo_A/luna')
+os.system('touch Taquirule/templo_A/luna')
 for i in range(9999):
     os.system("echo aa >> Taquirule/templo_A/luna")
 print '---Cosas necesarias para templo_A: OK'
 #Fin del templo AA
+
+#Templo de SB
+os.system('rm -rf Taquirule/templo_A/tael')
+os.system('touch Taquirule/templo_A/tael')
+#Fin del templo SB
 
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
