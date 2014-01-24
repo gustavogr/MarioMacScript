@@ -154,10 +154,8 @@ os.system('chmod 000 Taquirule/templo_E/tael')
 os.system('rm -rf Taquirule/templo_E/epona')
 os.system('touch Taquirule/templo_E/epona')
 
-os.system('echo twins biggoron >> Taquirule/templo_E/epona')
-os.system('echo great fairy >> Taquirule/templo_E/epona')
-os.system('echo tingle >> Taquirule/templo_E/epona')
-
+for i in range(3000):
+	os.system('echo ')	
 os.system('touch Taquirule/templo_E/great_fairy')
 os.system('touch Te faltan mas hadas >> Taquirule/templo_E/great_fairy') 
 
