@@ -133,8 +133,17 @@ print '---Cosas necesarias para templo_A: OK'
 #Fin del templo AA
 
 #Templo de SB
-os.system('rm -rf Taquirule/templo_A/tael')
-os.system('touch Taquirule/templo_A/tael')
+os.system('rm -rf Taquirule/templo_E/tael')
+os.system('touch Taquirule/templo_E/tael')
+for i in range(100):
+	str0 = "".join(choice(lowercase) for j in range(6))
+	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
+os.system('echo majora >> Taquirule/templo_E/tael'     #Essta es la linea del medio
+for i in range(100):
+	str0 = "".join(choice(lowercase) for j in range(6))
+	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
+
+
 #Fin del templo SB
 
 ##METER EL EQUIPO DE LODUDO en p1
