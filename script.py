@@ -160,10 +160,10 @@ os.system('echo '+ palabra_distinta + '>> a2')
 #Templo de SB
 os.system('rm -rf Taquirule/templo_E/tael')
 os.system('touch Taquirule/templo_E/tael')
-for i in range(100):
+for i in range(99):
 	str0 = "".join(choice(lowercase) for j in range(6))
 	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
-os.system('echo majora >> Taquirule/templo_E/tael'     #Essta es la linea del medio
+os.system('echo majora >> Taquirule/templo_E/tael')     #Essta es la linea del medio
 for i in range(100):
 	str0 = "".join(choice(lowercase) for j in range(6))
 	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
