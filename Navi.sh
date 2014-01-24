@@ -80,6 +80,10 @@ function inicio {
     printf "\n\n\n"
     read -p "$MENSAJE_READ"
     clear
+    cat dialogos/dialogo_mascaraA.txt
+    printf "\n\n\n"
+    read -p "$MENSAJE_READ"       
+    clear
     cat dibujos/navi.txt
 }
 
@@ -155,26 +159,44 @@ function final {
 }
 
 function entregar_mascara {
-    printf "\nListen!\n"
+    
     case $1 in 
-	"palabra1 palabra2 palabra3" )
-	    echo "tomatu vaina"
-	    ;;
-	"palabra4 palabra5" )
-	    echo "tomatu vaina"
+	"795" )
+	    clear
+	    cat dialogos/dialogo_mascaraE.txt
+	    printf "\n\n\n"
+	    read -p "$MENSAJE_READ"       	    
+	    clear
+	    cat dibujos/navi.txt
 	    ;;	
-	"palabra6 palabra7" )
-	    echo "tomatu vaina"
+	"Te faltan mas hadas" )
+	    clear
+	    cat dialogos/dialogo_mascaraF.txt
+	    printf "\n\n\n"
+	    read -p "$MENSAJE_READ"       
+	    clear
+	    cat dibujos/navi.txt
 	    ;;	
-	"palabra8 palabra9" )
-	    echo "tomatu vaina"
+	"Daniela no hace taquilla" )
+	    clear
+	    cat dialogos/dialogo_mascaraET.txt
+	    printf "\n\n\n"
+	    read -p "$MENSAJE_READ"       
+	    clear
+	    cat dibujos/navi.txt
 	    ;;	
-	"g" )
+	"GOMA" )
+	    clear
+	    cat dialogos/dialogo_mascaraMAC.txt
+	    printf "\n\n\n"
+	    read -p "$MENSAJE_READ"       
+	    final
+	    ;;	
+	"comandante supremo huga" )
 	    final
 	    ;;
 	* )
 	    echo "Lo siento, no te entiendo. Esa frase no corresponde a ninguna mascara"
-	    echo "Gente del mac: esto todavia no esta implementado, para saltarse al final pongan la letra g solamente"
 	    ;;
     esac
 }
