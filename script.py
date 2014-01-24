@@ -153,6 +153,12 @@ random.shuffle(aux)
 for w in aux:
     	os.system('echo '+ w + '>> a2')
 
+#Pregunta 6 de templo f
+os.system('touch cOsA && chmod 700 cOsA')
+os.system('mkdir Xss && chmod 777 Xss')
+for i in range(50):
+    os.system('touch Xss/' + aux.pop())
+os.system('chmod -R 777 Xss')
 
 
 #Templo de SB
