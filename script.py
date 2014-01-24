@@ -4,10 +4,20 @@
 #Se debe correr como root
 import fileinput
 import random
+from random import randint
+from random import choice
 import os
 import pwd
 import crypt
+import string
+from string import lowercase
 
+
+#Funcion que dado un numero, devuelve un numero aleatorio de n cifras
+def random_N_digitos(n):
+	rango_ini = 10**(n-1)
+	rango_fin = (10**n)-1
+	return randint(rango_ini, rango_fin)
 
 #Se crea el directorio principal
 os.system('mkdir Taquirule; chmod 755 -R Taquirule')
@@ -18,6 +28,8 @@ os.system('mkdir Taquirule/templo_E')   #Para este necesitas la mascara de SB
 os.system('mkdir Taquirule/templo_F')   #Para este necesitas la mascara de EP
 os.system('mkdir Taquirule/templo_ET')  #Para este necesitas la mascara de GR
 os.system('mkdir Taquirule/templo_MAC') #Para este... Para este... necesitas la mascara de EAS
+
+print 'Se crea Taquirule y los templos'
 
 #Se encriptan las claves de los usuario 
 aa_passwd = crypt.crypt('chileabro','22')
@@ -40,6 +52,7 @@ print 'Se crean los usuarios'
 #Se leen palabras de un diccionaro para crear las carpetas crap
 archivo = open('/etc/dictionaries-common/words','r')
 lineas = archivo.readlines()
+respaldo = lineas
 archivo.close()
 
 #Se les hace suffle para que salga aleatoria mente
@@ -52,7 +65,6 @@ for f in carpetas:
 		archivo = open("Taquirule/"+f.strip("\n")+"/"+(((lineas.pop()).lower()).replace("'","J")).strip("\n"),'w',0)
 		archivo.close()
 
-
 subcarpetas=[]
         
 #ESCRIBO CARPETAS BASURA EN CADA CARPETA
@@ -63,6 +75,60 @@ for f in carpetas:
         subcarpetas += [(aux2,aux)]
         os.system("mkdir Taquirule/"+aux2+"/"+aux+" 2> /dev/null && touch Taquirule/"+aux2+"/"+aux+"/##NOOO_AQUI_NO_ES"+aux+" && chmod +x Taquirule/"+aux2+"/"+aux+"/##NOOO_AQUI_NO_ES"+aux)
         
+
+print 'Se llenan los templos con carpetas y archivos basura'
+
+
+#templo_A
+#Se garantiza que no existan estos archivos
+os.system('find Taquirule/templo_A -name _ZO | xargs rm -rf')
+os.system('find Taquirule/templo_A -name _DE | xargs rm -rf')
+os.system('find Taquirule/templo_A -name link | xargs rm -rf')
+
+os.system('mkdir -p Taquirule/templo_A/_ZO/_RA')
+os.system('mkdir -p Taquirule/templo_A/_DE/_KU')
+os.system('touch Taquirule/templo_A/_ZO/##PONME_TODO')
+os.system('touch Taquirule/templo_A/_ZO/_RA/##ESO_PA_LANTE')
+os.system('touch Taquirule/templo_A/_DE/##PONME_TODO')
+os.system('touch Taquirule/templo_A/_DE/_KU/##ESO_PA_LANTE')
+
+os.system('touch Taquirule/templo_A/link')
+lineas = respaldo
+for i in range(50):
+	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_A/link')
+
+for i in range(207):
+	str0 = "".join(choice(lowercase) for j in range(45))
+	os.system('echo ":'+str(random_N_digitos(4))+str0+'" >> Taquirule/templo_A/link')
+os.system('echo ":5432accb seteacabaeltiempo" >> Taquirule/templo_A/link')
+
+for i in range(207):
+	str0 = "".join(choice(lowercase) for j in range(30))
+	os.system('echo ":'+str(random_N_digitos(4))+str0+'" >> Taquirule/templo_A/link')
+os.system('echo ":1322eccb acabasdeconseguirlaclaveparaSB" >> Taquirule/templo_A/link')
+for i in range(207):
+	str0 = "".join(choice(lowercase) for j in range(34))
+	os.system('echo ":'+str(random_N_digitos(4))+str0+'" >> Taquirule/templo_A/link')
+for i in range(307):
+	str0 = "".join(choice(lowercase) for j in range(24))
+	os.system('echo ":'+str(random_N_digitos(4))+str0+'" >> Taquirule/templo_A/link')
+os.system('echo ":1352eccba aNavilegustanlasgalletas" >> Taquirule/templo_A/link')
+for i in range(300):
+	str0 = "".join(choice(lowercase) for j in range(27))
+	os.system('echo ":'+str(random_N_digitos(4))+str0+'" >> Taquirule/templo_A/link')
+for i in range(50):
+	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_A/link')
+
+#archivo random que tendra 30 lineas
+os.system('rm -rf Taquirule/templo_A/gemelos')
+for i in range(30):
+    os.system("echo ola bale >> Taquirule/templo_A/gemelos")
+#Colocandole 30K a un archivo
+os.system('rm -rf Taquirule/templo_A/luna')
+for i in range(9999):
+    os.system("echo aa >> Taquirule/templo_A/luna")
+print '---Cosas necesarias para templo_A: OK'
+#Fin del templo AA
 
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
@@ -85,11 +151,11 @@ for f in carpetas:
 #os.system('mkdir TAREA/p0/vaca; mkdir TAREA/p0/vaca/pollito; mkdir TAREA/p2/soy; mkdir TAREA/p2/soy/la; mkdir TAREA/p2/soy/la/comadreja')
 #
 ##GARANTIZANDO QUE CIERTOS DIRECTORIOS NO SE CREARON POR AZAR DESDE EL DICCIONARIO
-#os.system('find TAREA -name taquilla | xargs rm -rf')
-#os.system('find TAREA -name mac | xargs rm -rf')
-#os.system('find TAREA -name vaca | xargs rm -rf')
-#os.system('find TAREA -name soy | xargs rm -rf')
-#os.system('find TAREA -name servidores | xargs rm -rf')
+#os.system('find Taquirule -name taquilla | xargs rm -rf')
+#os.system('find Taquirule -name mac | xargs rm -rf')
+#os.system('find Taquirule -name vaca | xargs rm -rf')
+#os.system('find Taquirule -name soy | xargs rm -rf')
+#os.system('find Taquirule -name servidores | xargs rm -rf')
 #
 #
 #
@@ -105,8 +171,6 @@ for f in carpetas:
 #os.system("mkdir TAREA/p0/mac")
 #
 ##COLOCANDOLE CASI 30K DE PURO SEXO Y ALCOHOL A UN ARCHIVO
-#for i in range(9999):
-#    os.system("echo aa >> TAREA/p0/mac/30k")
 #
 ##COLOCANDOLE LA GOTA QUE DERRAMO EL VASO AL ARCHIVO ANTERIOR
 #os.system("echo SB >> TAREA/p0/mac/30k")
