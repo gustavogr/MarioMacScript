@@ -4,19 +4,19 @@
                  i8MM0X:                                :X0MMZ:                           
               ,8M@2.                                        ,2@M0,                        
             ;MMa                                                aMM7                      
-          :MMX                    MAJORA'S MAC                    ;MMi                    
+          :MMX                                                    ;MMi                    
          @M7                                                        rM@                   
        .M@                                                            @M,                 
-      ,MS               Bienvenido al reino de Taquirule               SM,                
-      MX                                                                XM                
-     MM         Magicamente has sido enviado a una dimension paralela    MM               
-    .M        en la que deberas atravezar 5 retos para lograr regre-      M.              
-    ZM        sar a tu propia dimension.  Cada reto es un templo y        M8              
-    MM        en ellos iras recolectando mascaras, cada mascara sera      MM              
-    ZM        tu entrada al siguiente templo. En el templo final en-      MZ              
-     M        contraras las coordenadas del sitio al que debes ir         M.              
-     MM        si quieres regresar a tu dimension y terminar tu          MM               
-      MZ          mision.                                               aM                
+      ,MS                                                              SM,                
+      MX                 FELICIDADES HAS LOGRADO ENTRAR AL              XM                
+     MM                      FINAL:      TEMPLO MAC                      MM               
+    .M                                                                    M.              
+    ZM                                                                    M8              
+    MM                                                                    MM              
+    ZM               Tu clave para ponerte la mascara necesaria           MZ              
+     M                   para convertirte en el lengendario               M.              
+     MM                     EAS y entrar al templo es:                   MM               
+      MZ                              "soyeas"                          aM                
        MZ                                                              ZM.                
         MM                                                            MM                  
          0MS                                                        2MB                   

@@ -29,6 +29,7 @@ os.system('mkdir Taquirule/templo_F')   #Para este necesitas la mascara de EP
 os.system('mkdir Taquirule/templo_ET')  #Para este necesitas la mascara de GR
 os.system('mkdir Taquirule/templo_MAC') #Para este... Para este... necesitas la mascara de EAS
 
+
 print 'Se crea Taquirule y los templos'
 
 #Se encriptan las claves de los usuario 
@@ -47,7 +48,30 @@ os.system('useradd -s /bin/bash -p '+gr_passwd+' -m GR')
 os.system('useradd -s /bin/bash -p '+eas_passwd+' -m EAS')
 
 carpetas=(os.popen('ls Taquirule')).readlines()
-print 'Se crean los usuarios'
+
+os.system('cp mascara_templo_A /home/AA/ ; echo "cat ~/mascara_templo_A" >> /home/AA/.bashrc')
+os.system('cp mascara_templo_E /home/SB/  ; echo "cat ~/mascara_templo_E" >> /home/SB/.bashrc')
+os.system('cp mascara_templo_F /home/EP/  ; echo "cat ~/mascara_templo_F" >> /home/EP/.bashrc')
+os.system('cp mascara_templo_ET /home/GR/  ; echo "cat ~/mascara_templo_ET" >> /home/GR/.bashrc')
+os.system('cp mascara_templo_MAC /home/EAS/ ; echo "cat ~/mascara_templo_MAC" >> /home/EAS/.bashrc')
+
+os.system('echo "" > /etc/motd')
+os.system('echo "" > /var/run/motd.dynamic')
+
+os.system("echo \"alias ls='ls --color'\" >> /home/AA/.bashrc")
+os.system("echo \"alias ls='ls --color'\" >> /home/SB/.bashrc")
+os.system("echo \"alias ls='ls --color'\" >> /home/EP/.bashrc")
+os.system("echo \"alias ls='ls --color'\" >> /home/GR/.bashrc")
+os.system("echo \"alias ls='ls --color'\" >> /home/EAS/.bashrc")
+
+
+os.system("echo \"alias mascara='su'\" >> /home/AA/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/SB/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/EP/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/GR/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/EAS/.bashrc")
+
+print 'Se crean los usuarios y sus respectivos .bashrc'
 
 #Se leen palabras de un diccionaro para crear las carpetas crap
 archivo = open('/etc/dictionaries-common/words','r')
