@@ -1,5 +1,4 @@
 import curses
-import pygame
 import time
 import os
 

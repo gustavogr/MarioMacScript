@@ -1,0 +1,15 @@
+;; Object majorasmacscript/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "majorasmacscript/"
+  :tables (list 
+   (semanticdb-table "credits.py"
+    :major-mode 'python-mode
+    :tags '(("curses" include nil nil [1 14]) ("time" include nil nil [15 26]) ("os" include nil nil [27 36]) ("pantalla" variable nil nil [66 93]) ("pantalla" code nil nil [94 110]) ("pantalla" code nil nil [111 134]) ("maxx, maxy" code nil nil [180 212]) ("curses" code nil nil [235 253]) ("credFile" variable nil nil [281 312]) ("lineas" variable nil nil [313 342]) ("lineas" code nil nil [343 359]) ("credFile" code nil nil [360 376]) ("numlineas" variable nil nil [377 400]) ("try" code nil nil [717 1165]) ("curses" code nil nil [1268 1283]))
+    :file "credits.py"
+    :pointmax 1286
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre4"
+  :semanticdb-version "2.0pre4"
+  )
