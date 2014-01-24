@@ -223,6 +223,19 @@ os.system('chmod -R 777 Taquirule/templo_F/Xss')
 
 #Fin del templo EP
 
+
+
+
+
+
+#Se cambian los permisos de las carpetas
+MASCARAS = ['AA','SB','EP','GR','EAS']
+TEMPLOS = ['templo_A', 'templo_E', 'templo_F', 'templo_ET', 'templo_MAC']
+for i in range(5):
+	str0 = 'Taquirule/'+TEMPLOS[i]
+	os.system('chown '+MASCARAS[i]+' '+str0+' ; chmod 700 '+MASCARAS[i]+' '+str0)
+
+
 ##METER EL EQUIPO DE LODUDO en p1
 #lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
 #lodudo2=[".O",".d",".u",".D",".o",".L"]
