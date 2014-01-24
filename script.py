@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #Se debe correr como root
+import itertools
 import fileinput
 import random
 from random import randint
@@ -128,7 +129,7 @@ os.system('rm -rf Taquirule/templo_A/moon')
 os.system('touch Taquirule/templo_A/moon')
 for i in range(9999):
     os.system("echo aa >> Taquirule/templo_A/moon")
-print '---Cosas necesarias para templo_A: OK'
+print '---Se carga el templo_A'
 #Fin del templo AA
 
 
@@ -187,6 +188,31 @@ for i in range(800):
 os.system('touch Taquirule/templo_E/great_fairy')
 os.system('echo "Te faltan mas hadas" >> Taquirule/templo_E/great_fairy') 
 
+#Problema de _TINGLES
+os.system('rm -rf Taquirule/templo_E/_TINGLES')
+os.system('mkdir Taquirule/templo_E/_TINGLES')
+zelda = 'zelda'
+zelda_l = map(''.join, itertools.product(*zip(zelda.upper(), zelda.lower())))
+dir_zelda = ['_THE','_LEGEND','_OF','_EAS','_MAJORAS','_MAC']
+
+for z in zelda_l:  #Se mina todo el directorio _TINGLES (nivel 1)
+	os.system('touch Taquirule/templo_E/_TINGLES/'+z) 
+for z in dir_zelda:
+	os.system('mkdir Taquirule/templo_E/_TINGLES/'+z)	
+	for a in zelda_l:  #Se minan todos los directorios del segundo nivel
+		os.system('touch Taquirule/templo_E/_TINGLES/'+z+'/'+a) 
+	for x in dir_zelda:
+		os.system('mkdir Taquirule/templo_E/_TINGLES/'+z+'/'+x)	
+		for y in dir_zelda:
+			os.system('mkdir Taquirule/templo_E/_TINGLES/'+z+'/'+x+'/'+y)	
+			for a in zelda_l:  #Se minan todos los directorios del cuarto nivel
+				os.system('touch Taquirule/templo_E/_TINGLES/'+z+'/'+x+'/'+y+'/'+a) 
+
+os.system('touch Taquirule/templo_E/_TINGLES/_THE/_LEGEND/zelda')
+os.system('touch Taquirule/templo_E/_TINGLES/_OF/_THE/zELDa')
+os.system('touch Taquirule/templo_E/_TINGLES/_EAS/_MAJORAS/ZeldA')
+os.system('touch Taquirule/templo_E/_TINGLES/_MAC/_MAC/ZELDA')
+print '---Se carga el templo_E'
 #Fin del templo SB
 
 ##METER EL EQUIPO DE LODUDO en p1
