@@ -226,12 +226,11 @@ os.system('chmod -R 777 Taquirule/templo_F/Xss')
 #Templo GR
 os.system('rm -rf Taquirule/templo_ET/_SKULL')
 os.system('rm -rf Taquirule/templo_ET/_KID')
-for i in range(800):
-	os.system('touch Taquirule/templo_ET/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
-
+lineas = respaldo
 os.system('mkdir Taquirule/templo_ET/_SKULL')
 os.system('mkdir Taquirule/templo_ET/_KID')
-lineas = respaldo
+for i in range(800):
+	os.system('touch Taquirule/templo_ET/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
 	
 
 
