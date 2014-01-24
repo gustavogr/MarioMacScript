@@ -67,6 +67,10 @@ function trapear {
 }
 
 function inicio {
+    clear 
+    echo "Hola preprador, mi PID es: $$"
+    printf "\n\n\n"
+    read -p "$MENSAJE_READ"
     clear
     cat dibujos/navi.txt
     printf "\n\n\n"
@@ -90,7 +94,7 @@ function inicio {
 function dormir {
     for i in `seq 1 100000`
     do
-	echo ""
+        p=""
     done
 }
 
@@ -114,7 +118,7 @@ function go_evil {
 function insultar {
     clear
     cat dialogos/dialogo_perrita.txt
-    sleep 1
+    sleep 0.3
     cat dibujos/ganondorf.txt
 }
 
@@ -169,7 +173,7 @@ function entregar_mascara {
 	    clear
 	    cat dibujos/navi.txt
 	    ;;	
-	"Te faltan mas hadas" )
+	"Te-faltan-mas-hadas" | "Te faltan mas hadas" )
 	    clear
 	    cat dialogos/dialogo_mascaraF.txt
 	    printf "\n\n\n"
@@ -177,7 +181,7 @@ function entregar_mascara {
 	    clear
 	    cat dibujos/navi.txt
 	    ;;	
-	"Daniela no hace taquilla" )
+	"Daniela-no-hace-taquilla" )
 	    clear
 	    cat dialogos/dialogo_mascaraET.txt
 	    printf "\n\n\n"
@@ -192,7 +196,7 @@ function entregar_mascara {
 	    read -p "$MENSAJE_READ"       
 	    final
 	    ;;	
-	"comandante supremo huga" )
+	"comandante-supremo-huga" )
 	    final
 	    ;;
 	* )
