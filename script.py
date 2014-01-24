@@ -119,22 +119,13 @@ for i in range(300):
 for i in range(50):
 	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_A/link')
 
-#archivo random que tendra 30 lineas
-os.system('rm -rf Taquirule/templo_A/twins')
-os.system('touch Taquirule/templo_A/twins')
-for i in range(30):
-    os.system("echo ola bale >> Taquirule/templo_A/twins")
-#Colocandole 30K a un archivo
-os.system('rm -rf Taquirule/templo_A/moon')
-os.system('touch Taquirule/templo_A/moon')
-for i in range(9999):
-    os.system("echo aa >> Taquirule/templo_A/moon")
 print '---Se carga el templo_A'
 #Fin del templo AA
 
 #Cosas de la pregunta 7
 masks=['keaton','skull','spooky','bunny','truth','goron','zora', 'gerudo',\
            'fiercedeity','blast','brenen', 'circus']
+
 words_from_masks = []
 for i in range(1,300):
     for m in masks:	
@@ -143,19 +134,10 @@ for i in range(1,300):
             words_from_masks.append(m + str(random_N_digitos(int(num))))
 
 words_from_masks = list(set(words_from_masks))
-
-for w in words_from_masks:
-    	os.system('echo '+ w + '>> a1')
-
-palabra_distinta= 'CANALIZAR'
-aux = words_from_masks + [palabra_distinta]
-
-random.shuffle(aux)        
-for w in aux:
-    	os.system('echo '+ w + '>> a2')
+respaldo_wfms = words_from_masks
 
 
-#Templo de SB
+#Templo_E
 os.system('rm -rf Taquirule/templo_E/tatl')
 os.system('touch Taquirule/templo_E/tatl')
 for i in range(99):
@@ -209,19 +191,35 @@ os.system('touch Taquirule/templo_E/_TINGLES/_THE/_LEGEND/zelda')
 os.system('touch Taquirule/templo_E/_TINGLES/_OF/_THE/zELDa')
 os.system('touch Taquirule/templo_E/_TINGLES/_EAS/_MAJORAS/ZeldA')
 os.system('touch Taquirule/templo_E/_TINGLES/_MAC/_MAC/ZELDA')
-print '---Se carga el templo_E'
-#Fin del templo SB
 
-#Templo EP
+
+#carpetas que comienzen con -
+os.system('mkdir Taquirule/templo_E/_SWORD')
+os.system('touch Taquirule/templo_E/_SWORD/-zora')
+os.system('touch Taquirule/templo_E/-zora')
+os.system('touch Taquirule/templo_E/-eas')
+os.system('touch Taquirule/templo_E/-is')
+os.system('touch Taquirule/templo_E/-the')
+os.system('mkdir Taquirule/templo_E/-HERO')
+os.system('touch Taquirule/templo_E/-HERO/-of')
+os.system('touch Taquirule/templo_E/-HERO/-this')
+os.system('touch Taquirule/templo_E/-HERO/-legend')
+
+print '---Se carga el templo_E'
+#Fin del templo_E 
+
+#Templo_F 
 
 #Genera un archivo cOsA con permisos 700 y luego una carpera Xss con permisos 777
 os.system('touch Taquirule/templo_F/cOsA && chmod 700 Taquirule/templo_F/cOsA')
-os.system('mkdir Taquirule/templo_F/Xss && chmod 777 Taquirule/templo_F/Xss')
+os.system('mkdir Taquirule/templo_F/Xss')
+
+aux = respaldo_wfms 
 for i in range(50):
     os.system('touch Taquirule/templo_F/Xss/' + aux.pop())
-os.system('chmod -R 777 Taquirule/templo_F/Xss')
 
-#Fin del templo EP
+print '---Se carga el templo_F'
+#Fin del templo_F 
 
 #Templo GR
 os.system('rm -rf Taquirule/templo_ET/_SKULL')
@@ -230,14 +228,49 @@ lineas = respaldo
 os.system('mkdir Taquirule/templo_ET/_SKULL')
 os.system('mkdir Taquirule/templo_ET/_KID')
 for i in range(800):
-	os.system('touch Taquirule/templo_ET/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
+	os.system('touch Taquirule/templo_ET/_SKULL/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
+for i in range(600):
+	os.system('touch Taquirule/templo_ET/_KID/'+(((lineas.pop()).lower()).replace("'",":")).strip("\n"))
+
+os.system('cp -r Taquirule/templo_ET/_SKULL/ Taquirule/templo_ET/_SKULL2')
+os.system('cp -r Taquirule/templo_ET/_KID/ Taquirule/templo_ET/_KID2')
 	
 
+#archivo random que tendra 30 lineas
+os.system('rm -rf Taquirule/templo_ET/goron')
+os.system('touch Taquirule/templo_ET/goron')
+for i in range(30):
+    os.system("echo The Legend of EAS >> Taquirule/templo_ET/goron")
+
+#Colocandole 30K a un archivo
+os.system('mkdir -p Taquirule/templo_ET/SKULL/KID/IS/IN/THE/')
+os.system('touch Taquirule/templo_ET/SKULL/KID/IS/IN/THE/moon')
+for i in range(9999):
+    os.system("echo aa >> Taquirule/templo_ET/SKULL/KID/IS/IN/THE/moon")
+os.system('echo "Creete que eres EAS... di: soyseas" >> Taquirule/templo_ET/SKULL/KID/IS/IN/THE/moon')
 
 
-#Fin del Templo de GR 
+os.system('rm -rf Taquirule/templo_ET/gekko')
+os.system('rm -rf Taquirule/templo_ET/snapper')
+
+os.system('touch Taquirule/templo_ET/gekko')
+os.system('touch Taquirule/templo_ET/snapper')
+
+words_from_masks = respaldo_wfms
+for w in words_from_masks:
+    	os.system('echo '+ w + '>> Taquirule/templo_ET/gekko')
+
+palabra_distinta= 'GOMA'
+aux = words_from_masks + [palabra_distinta]
+
+random.shuffle(aux)        
+for w in aux:
+    	os.system('echo '+ w + '>> Taquirule/templo_ET/snapper')
 
 
+
+print '---Se carga el templo_ET'
+#Fin del templo_ET
 
 
 #Se cambian los permisos de las carpetas
@@ -245,99 +278,11 @@ MASCARAS = ['AA','SB','EP','GR','EAS']
 TEMPLOS = ['templo_A', 'templo_E', 'templo_F', 'templo_ET', 'templo_MAC']
 for i in range(5):
 	str0 = 'Taquirule/'+TEMPLOS[i]
-	os.system('chown '+MASCARAS[i]+' '+str0+' ; chmod 700 '+' '+str0)
+	os.system('chown -R '+MASCARAS[i]+' '+str0+' ; chmod -R 700 '+' '+str0)
+
+os.system('chmod 000 Taquirule/templo_E/tael') #tael no tiene permisos. Es el hada maligna
+os.system('chmod 777 Taquirule/templo_F/Xss') #Los permisos de la carpeta para el ejercicio 2 de F 
+
+os.system('chmod 777 Navi.sh')
 
 
-##METER EL EQUIPO DE LODUDO en p1
-#lodudo=["Lezama","Giuseppe","Jon","Yoshi","Erick","Isaac","Fundaro","Javier"]
-#lodudo2=[".O",".d",".u",".D",".o",".L"]
-#
-#for i in lodudo+lodudo2:
-#    os.system("touch TAREA/p0/"+i)
-#
-#for i in range(6):
-#    os.system('touch --date="2011-10-2"'+str(i)+" TAREA/p0/"+lodudo2[i])
-#
-#
-#
-##METO PREGUNTAS GAY EN P1
-#os.system('touch TAREA/p0/"^alexandra es la profesora encargada del LDAC"')
-#os.system('touch TAREA/p0/"^violetta es la ingeniero de mantenimiento del LAB. F"')
-#os.system('touch TAREA/p0/"^Saruman fue el antiguo jefe del LAB. F (Hoy en dia es Carolina Chang)"')
-#
-##COLOCANDO DIRECTORIOS Q PIDIO SOFIA
-#os.system('mkdir TAREA/p0/vaca; mkdir TAREA/p0/vaca/pollito; mkdir TAREA/p2/soy; mkdir TAREA/p2/soy/la; mkdir TAREA/p2/soy/la/comadreja')
-#
-##GARANTIZANDO QUE CIERTOS DIRECTORIOS NO SE CREARON POR AZAR DESDE EL DICCIONARIO
-#os.system('find Taquirule -name taquilla | xargs rm -rf')
-#os.system('find Taquirule -name mac | xargs rm -rf')
-#os.system('find Taquirule -name vaca | xargs rm -rf')
-#os.system('find Taquirule -name soy | xargs rm -rf')
-#os.system('find Taquirule -name servidores | xargs rm -rf')
-#
-#
-#
-##METIENDO COSAS EN UN DIRECTORIO RANDOM
-#dir="TAREA/"+(subcarpetas[0])[0]+"/"+(subcarpetas[0])[1]
-#os.system("touch "+dir+"/taquilla")
-#
-##COLOCANDO EN DICHO ARCHIVO LAS BENDITAS 30 LINEAS
-#for i in range(30):
-#    os.system("echo a >> "+dir+"/taquilla")
-#
-##CREANDO OTRO DIR Q PIDIO SOFIA
-#os.system("mkdir TAREA/p0/mac")
-#
-##COLOCANDOLE CASI 30K DE PURO SEXO Y ALCOHOL A UN ARCHIVO
-#
-##COLOCANDOLE LA GOTA QUE DERRAMO EL VASO AL ARCHIVO ANTERIOR
-#os.system("echo SB >> TAREA/p0/mac/30k")
-#
-##COLOCANDO UN ARCHIVO EJECUTABLE CON UN PATRON DADO QUE REVELA QUIEN TRAJO EL TREN DE CHOCOLATE AL MAC
-#os.system('touch TAREA/p3/##CH_fue_quien_trajo_el_tren_de_chocolate_al_mac && chmod +x TAREA/p3/##CH_fue_quien_trajo_el_tren_de_chocolate_al_mac')
-#
-#
-##LLENANDO EL ARCHIVO DE JON
-#servidores=["PISCIS","ADVERICK","HAGEN","CANCER","MIME","LEO","VIRGO","CAPRICORNIO","GHOST","PIKACHU"]
-#
-#for i in range(89):
-#    random.shuffle(servidores)
-#    os.system("echo "+servidores[0]+" >> TAREA/p2/servidores")
-#
-#os.system("echo PISCIS >> TAREA/p2/servidores")
-#
-#for i in range(120):
-#    random.shuffle(servidores)
-#    os.system("echo "+servidores[0]+" >> TAREA/p2/servidores")
-#
-#
-#os.system("mkdir TAREA/p3/nolee && cp -R TAREA/p2 TAREA/p3/nolee && man ps >> TAREA/p3/nolee/ps && chmod 000 TAREA/p3/nolee")
-#
-#text1="Un elder, es como una vaina loca que te lleva a la gloria"
-#text2="Un elder, es como windows pero que no es chimbo"
-#text3="Un elder, es como chuck nurris cuando estaba chiquito"
-#text4="Un elder, es como novich pero sin que te clave en lenguajes"
-#text5="Un elder, puede estar en japon, en suecia o viviendo en tu misma ciudad"
-#text6="Un elder, puede ser un borrachito chevere o un activista politico"
-#text7="Un elder puede hacerte imaginar que tu no eres tu, sino que eres tu barba o shakira"
-#text8='"Un elder es (para dejar de jalar tanta bola) un ex-miembro del mac que se graduo siendo parte del mac y que dejo una marca en nuestra historia"'
-#
-#os.system("touch TAREA/leeteste")
-#for i in ["TAREA/p0/elder1","TAREA/p0/elder2"]:
-#    os.system("echo "+i+" >> TAREA/leeteste")
-#    os.system("touch "+i)
-#    
-#
-#for i in [text1,text2,text3,text4]:
-#    os.system("echo "+i+" >> TAREA/p0/elder1")
-#
-#for i in [text5,text6,text7,text8]:
-#    os.system("echo "+i+" >> TAREA/p0/elder2")
-#    
-#
-#
-#
-#
-#
-#
-#
