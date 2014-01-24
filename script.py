@@ -179,10 +179,13 @@ os.system('chmod 000 Taquirule/templo_E/tael')
 os.system('rm -rf Taquirule/templo_E/epona')
 os.system('touch Taquirule/templo_E/epona')
 
-for i in range(3000):
-	os.system('echo ')	
+for w in words_from_masks:
+	os.system('echo '+ w + ' >> Taquirule/templo_E/epona')	
+os.system('echo great_fairy >> Taquirule/templo_E/epona')
+for i in range(800):
+	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_E/epona')
 os.system('touch Taquirule/templo_E/great_fairy')
-os.system('touch Te faltan mas hadas >> Taquirule/templo_E/great_fairy') 
+os.system('echo "Te faltan mas hadas" >> Taquirule/templo_E/great_fairy') 
 
 #Fin del templo SB
 
