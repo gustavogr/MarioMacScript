@@ -49,11 +49,11 @@ os.system('useradd -s /bin/bash -p '+eas_passwd+' -m EAS')
 
 carpetas=(os.popen('ls Taquirule')).readlines()
 
-os.system('cp mascara_templo_A /home/AA/ ; echo "cat mascara_templo_A" >> /home/AA/.bashrc')
-os.system('cp mascara_templo_E /home/SB/  ; echo "cat mascara_templo_E" >> /home/SB/.bashrc')
-os.system('cp mascara_templo_F /home/EP/  ; echo "cat mascara_templo_F" >> /home/EP/.bashrc')
-os.system('cp mascara_templo_ET /home/GR/  ; echo "cat mascara_templo_ET" >> /home/GR/.bashrc')
-os.system('cp mascara_templo_MAC /home/EAS/ ; echo "cat mascara_templo_MAC" >> /home/EAS/.bashrc')
+os.system('cp mascara_templo_A /home/AA/ ; echo "cat ~/mascara_templo_A" >> /home/AA/.bashrc')
+os.system('cp mascara_templo_E /home/SB/  ; echo "cat ~/mascara_templo_E" >> /home/SB/.bashrc')
+os.system('cp mascara_templo_F /home/EP/  ; echo "cat ~/mascara_templo_F" >> /home/EP/.bashrc')
+os.system('cp mascara_templo_ET /home/GR/  ; echo "cat ~/mascara_templo_ET" >> /home/GR/.bashrc')
+os.system('cp mascara_templo_MAC /home/EAS/ ; echo "cat ~/mascara_templo_MAC" >> /home/EAS/.bashrc')
 
 os.system('echo "" > /etc/motd')
 os.system('echo "" > /var/run/motd.dynamic')
@@ -65,6 +65,11 @@ os.system("echo \"alias ls='ls --color'\" >> /home/GR/.bashrc")
 os.system("echo \"alias ls='ls --color'\" >> /home/EAS/.bashrc")
 
 
+os.system("echo \"alias mascara='su'\" >> /home/AA/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/SB/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/EP/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/GR/.bashrc")
+os.system("echo \"alias mascara='su'\" >> /home/EAS/.bashrc")
 
 print 'Se crean los usuarios y sus respectivos .bashrc'
 
