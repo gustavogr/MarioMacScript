@@ -119,15 +119,15 @@ for i in range(50):
 	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_A/link')
 
 #archivo random que tendra 30 lineas
-os.system('rm -rf Taquirule/templo_A/gemelos')
-os.system('touch Taquirule/templo_A/gemelos')
+os.system('rm -rf Taquirule/templo_A/twins')
+os.system('touch Taquirule/templo_A/twins')
 for i in range(30):
-    os.system("echo ola bale >> Taquirule/templo_A/gemelos")
+    os.system("echo ola bale >> Taquirule/templo_A/twins")
 #Colocandole 30K a un archivo
-os.system('rm -rf Taquirule/templo_A/luna')
-os.system('touch Taquirule/templo_A/luna')
+os.system('rm -rf Taquirule/templo_A/moon')
+os.system('touch Taquirule/templo_A/moon')
 for i in range(9999):
-    os.system("echo aa >> Taquirule/templo_A/luna")
+    os.system("echo aa >> Taquirule/templo_A/moon")
 print '---Cosas necesarias para templo_A: OK'
 #Fin del templo AA
 
@@ -156,16 +156,34 @@ for w in aux:
 
 
 #Templo de SB
-os.system('rm -rf Taquirule/templo_E/tael')
-os.system('touch Taquirule/templo_E/tael')
+os.system('rm -rf Taquirule/templo_E/tatl')
+os.system('touch Taquirule/templo_E/tatl')
 for i in range(99):
 	str0 = "".join(choice(lowercase) for j in range(6))
-	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
-os.system('echo majora >> Taquirule/templo_E/tael')     #Essta es la linea del medio
+	os.system('echo '+str0+' >> Taquirule/templo_E/tatl')
+os.system('echo majora >> Taquirule/templo_E/tatl')     #Essta es la linea del medio
 for i in range(100):
 	str0 = "".join(choice(lowercase) for j in range(6))
-	os.system('echo '+str0+' >> Taquirule/templo_E/tael')
+	os.system('echo '+str0+' >> Taquirule/templo_E/tatl')
 
+
+os.system('rm -rf Taquirule/templo_E/tael')
+os.system('cp Taquirule/templo_E/tatl Taquirule/templo_E/tael')
+os.system('chmod 000 Taquirule/templo_E/tael') 
+
+#Archivo en el que deberan mostrar el contenido de los archivos que esten
+#contenidos en el 
+
+os.system('rm -rf Taquirule/templo_E/epona')
+os.system('touch Taquirule/templo_E/epona')
+
+for w in words_from_masks:
+	os.system('echo '+ w + ' >> Taquirule/templo_E/epona')	
+os.system('echo great_fairy >> Taquirule/templo_E/epona')
+for i in range(800):
+	os.system('echo "'+(((lineas.pop()).lower()).replace("'",":")).strip("\n")+'" >> Taquirule/templo_E/epona')
+os.system('touch Taquirule/templo_E/great_fairy')
+os.system('echo "Te faltan mas hadas" >> Taquirule/templo_E/great_fairy') 
 
 #Fin del templo SB
 
