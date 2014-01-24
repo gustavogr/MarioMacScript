@@ -109,7 +109,7 @@ function go_evil {
 
 function insultar {
     clear
-    cat dialogos/dialogo.txt
+    cat dialogos/dialogo_perrita.txt
     sleep 1
     cat dibujos/ganondorf.txt
 }
