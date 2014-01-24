@@ -12,7 +12,6 @@ import crypt
 import string
 from string import lowercase
 
-
 #Funcion que dado un numero, devuelve un numero aleatorio de n cifras
 def random_N_digitos(n):
 	rango_ini = 10**(n-1)
@@ -131,6 +130,32 @@ for i in range(9999):
     os.system("echo aa >> Taquirule/templo_A/luna")
 print '---Cosas necesarias para templo_A: OK'
 #Fin del templo AA
+
+
+#Cosas de la pregunta 7
+masks=['keaton','skull','spooky','bunny','truth','goron','zora', 'gerudo',\
+	       'fiercedeity','blast','brenen', 'circus']
+words_from_masks = []
+for i in range(1,300):
+	for m in masks:	
+		num = i % 5
+        if num != 0:
+		words_from_masks.append(m + str(random_N_digitos(int(num))))
+
+words_from_masks = list(set(words_from_masks))
+
+for w in words_from_masks:
+    	os.system('echo '+ w + '>> a1')
+
+random.shuffle(words_from_masks)        
+for w in words_from_masks:
+    	os.system('echo '+ w + '>> a2')
+
+palabra_distinta= 'CANALIZAR'
+os.system('echo '+ palabra_distinta + '>> a2')
+
+
+
 
 #Templo de SB
 os.system('rm -rf Taquirule/templo_E/tael')
